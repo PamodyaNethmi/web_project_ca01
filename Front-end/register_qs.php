@@ -1,3 +1,4 @@
+
 <?php
 header('Content-Type: application/json');
 require 'config2.php'; // DB connection

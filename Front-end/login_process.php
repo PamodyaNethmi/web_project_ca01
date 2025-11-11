@@ -23,6 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (password_verify($password, $user['password'])) {
             session_start();
+	
+$_SESSION['user_logged_in'] = true;
+$_SESSION['email'] = $email; // optional
+
+		
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_name'] = $user['full_name'];
             $_SESSION['user_email'] = $user['email'];
@@ -30,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo json_encode([
                 'success' => true,
                 'message' => 'Login successful!',
-                'redirect' => 'dashboard.php'
+                'redirect' => 'events.html'
             ]);
         } else {
             echo json_encode(['success' => false, 'message' => 'Incorrect password.']);
