@@ -1,0 +1,284 @@
+/* login.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --primary-dark-blue: #1a2238; /* From your navbar background and footer */
+    --accent-gold: #f39c12; /* From your login button */
+    --light-text: #ffffff;
+    --dark-text: #333333;
+    --form-bg-gray: rgba(105, 105, 105, 0.7); /* Translucent gray for the form */
+    --input-bg-light: #f0f0f0; /* Light background for inputs */
+    --input-border: #cccccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Navigation Bar */
+header {
+    background-color: var(--primary-dark-blue);
+    color: var(--light-text);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Adjust logo size */
+    border-radius: 5px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: var(--light-text);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-gold);
+}
+
+.login-btn {
+    background-color: var(--accent-gold);
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #e67e22; /* Slightly darker gold */
+}
+
+/* Main Content - Login Page Specific */
+.login-page-main {
+    flex-grow: 1; /* Allows main to take up available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-image: url('template-dark-navy-blue-luxury-premium-abstract-background-with-luxury-triangles-pattern-and-gold-lighting-lines-illustration-vector.jpg'); /* You'll need to replace 'login-bg.jpg' with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: for a parallax-like effect */
+}
+
+.login-container {
+    background-color: var(--form-bg-gray);
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+}
+
+.login-container h2 {
+    font-family: 'Playfair Display', serif; /* Elegant font from the image */
+    font-size: 2.2em;
+    color: var(--light-text);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: var(--light-text);
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    font-weight: 400; /* Lighter font weight as in image */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--input-bg-light);
+    color: var(--dark-text);
+    font-size: 1em;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #888;
+}
+
+.form-group input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent-gold);
+}
+
+.signup-btn {
+    background-color: var(--accent-gold);
+    color: var(--light-text);
+    padding: 14px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    width: 60%; /* Make button a bit narrower */
+    max-width: 250px;
+}
+
+.signup-btn:hover {
+    background-color: #e67e22;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-dark-blue);     color: var(--light-text);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-text {
+    font-family: 'Playfair Display', serif; /* Apply elegant font to footer text */
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.social-icons a {
+    color: var(--light-text);
+    font-size: 1.5rem;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-dark-blue); /* Hover effect for social icons */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar-left {
+        margin-bottom: 15px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    nav ul li a {
+        padding: 5px 0;
+        display: block;
+    }
+
+    .login-container {
+        padding: 30px;
+        margin: 0 15px;
+    }
+    .login-container h2 {
+        font-size: 1.8em;
+    }
+    .form-group label {
+        font-size: 1em;
+    }
+    .signup-btn {
+        width: 80%;
+        padding: 12px 20px;
+        font-size: 1.1em;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-text {
+        margin-bottom: 10px;
+    }
+    .social-icons {
+        margin-top: 10px;
+    }
+    .social-icons a {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 35px;
+    }
+    .login-container h2 {
+        font-size: 1.6em;
+    }
+    .form-group input {
+        padding: 10px;
+    }
+    .signup-btn {
+        width: 90%;
+        font-size: 1em;
+    }
+}
+

@@ -1,0 +1,331 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #172542; /* Dark Blue from header */
+    --secondary-color: #f39c12; /* Golden/Orange from footer and buttons */
+    --text-color-dark: #333333;
+    --text-color-light: #ffffff;
+    --border-color: #cccccc;
+    --background-light: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color-dark);
+    background-color: var(--background-light);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 1rem 2rem;
+    display: flex; /* This ensures the .navbar itself can be centered or take full width */
+    
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* This is the key property for spacing */
+    align-items: center;
+    background-color: #1a2238;
+    padding: 10px 20px;
+    color: white;
+    width: 100%; /* Ensure it takes full width within its header container */
+    max-width: 1200px; /* Optional: Adjust based on your overall content width */
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.back-arrow {
+    font-size: 24px;
+    color: white; /* White arrow color */
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.logo img {
+	height:40px;
+    margin-right: 10px;
+    border-radius: 5px; /* Added for a slightly softer look */
+}
+
+.navbar .logo span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 25px; /* Spacing between navigation items */
+}
+
+.navbar nav ul li a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.login-btn {
+    background-color: var(--secondary-color);
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #e67e22; /* Slightly darker orange */
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px); /* Adjust based on header/footer height */
+}
+
+.registration-section {
+    display: flex;
+    background-color: var(--text-color-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Changed from .image-container to .background-image-pane */
+.background-image-pane {
+    flex: 1;
+    background-image: url('bgimage.jpg'); /* Your image URL here */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Don't repeat the image */
+}
+
+.registration-form {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.registration-form h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    flex: 0 0 150px; /* Fixed width for labels */
+    font-weight: 600;
+    margin-right: 15px;
+    color: var(--text-color-dark);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%; /* Ensure inputs take full width of their flex item */
+    min-width: 0; /* Allow input to shrink if needed */
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(243, 156, 18, 0.2);
+}
+
+.register-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: left; /* Align button to the start of the form area */
+    margin-top: 1.5rem;
+}
+
+.register-btn:hover {
+    background-color: #e67e22;
+}
+
+footer {
+    background-color: #172542;
+    color: var(--text-color-light);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Align with main content width */
+    margin: 0 auto;
+}
+
+.social-icons a {
+    color: var(--text-color-light);
+    font-size: 1.5rem;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .registration-section {
+        flex-direction: column;
+    }
+
+    .background-image-pane {
+        height: 300px; /* Give background image some height on smaller screens */
+    }
+
+    .registration-form {
+        padding: 2rem;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        margin-bottom: 5px;
+        flex: unset;
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        /* When responsive, maybe stack the logo/back and nav */
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    .navbar {
+        flex-direction: column; /* Stack logo/nav vertically on smaller screens */
+    }
+
+    .navbar-left {
+        margin-bottom: 1rem; /* Space between logo and nav on mobile */
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar nav ul li {
+        margin: 0.5rem 0;
+	
+    }
+
+    .navbar nav ul li a {
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+.footer-content p {
+    margin: 0;
+    color: white; /* Dark text for footer copyright */
+    font-weight: bold;
+}
+
+
+    .social-icons {
+        margin-top: 1rem;
+    }
+
+    .social-icons a {
+        margin: 0 10px;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo span {
+        font-size: 1rem;
+    }
+
+    .registration-form h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .register-btn {
+        width: 100%;
+        padding: 0.8rem 1.5rem;
+    }
+}
+

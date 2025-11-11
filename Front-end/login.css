@@ -1,0 +1,325 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #f8f8f8;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #172542; /* Dark blue from the logo */
+    color: white;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .logo span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 25px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+    color: #white; /* Orange for hover and active */
+}
+
+.navbar .login-btn {
+    background-color: #f39c12; /* Orange button */
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .login-btn:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+}
+
+/* Login Page Specific Styles */
+.login-page {
+    background-image: url('template-dark-navy-blue-luxury-premium-abstract-background-with-luxury-triangles-pattern-and-gold-lighting-lines-illustration-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px); /* Adjust based on header/footer height */
+    padding: 20px;
+    position: relative;
+}
+
+.login-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    z-index: 2;
+    color: white;
+}
+
+.login-container h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.input-group input {
+    width: 400px;
+	height:30px;
+    padding: 18px 20px;             /* Increased height */
+    margin-bottom: 25px;
+    border: 2px solid #f39c12;      /* Highlight border */
+    border-radius: 8px;             /* Slightly round corners */
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background */
+    color: #333;                    /* Dark text inside */
+    font-size: 1.1em;               /* Larger text */
+    font-weight: 500;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: #666;
+}
+
+.input-group input:focus {
+    background-color: #fff;
+    border-color: #e67e22;          /* Orange glow */
+    box-shadow: 0 0 8px rgba(243, 156, 18, 0.6);
+}
+
+
+.sign-in-btn {
+    width: 50%;
+    padding: 5px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.sign-in-btn:hover {
+    background-color: #e67e22;
+}
+
+.or-divider {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 25px 0;
+    position: relative;
+    font-size: 0.9em;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.or-divider::before {
+    left: 0;
+}
+
+.or-divider::after {
+    right: 0;
+}
+
+.social-login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-login-btn i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.google-btn {
+    background-color: white;
+    color: #4285f4;
+}
+
+.google-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.facebook-btn {
+    background-color: #1877f2;
+    color: white;
+}
+
+.facebook-btn:hover {
+    background-color: #145cb3;
+}
+
+.signup-link {
+    margin-top: 30px;
+    font-size: 0.95em;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.signup-link a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #e67e22;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #172542; /* Orange footer background */
+    color: white;
+    padding: 20px 5%;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: white; /* Dark text for footer copyright */
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white; /* Dark icons for footer */
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .logo {
+        margin-bottom: 15px;
+    }
+
+    .navbar nav ul {
+        margin-top: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar nav ul li {
+        margin: 0 10px;
+    }
+
+    .login-container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .login-container h2 {
+        font-size: 1.8em;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+    }
+}
+
+
+
+

@@ -1,0 +1,327 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #f8f8f8;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #172542; /* Dark blue from the logo */
+    color: white;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .logo span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 25px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+    color: #f39c12; /* Orange for hover and active */
+}
+
+.navbar .login-btn {
+    background-color: #f39c12; /* Orange button */
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .login-btn:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+}
+
+/* Main Content */
+main {
+    padding: 30px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-us-hero {
+    text-align: center;
+    padding: 50px 0;
+    background-color: white;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.about-us-hero h1 {
+    font-size: 3em;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.mission-vision {
+    margin-bottom: 50px;
+}
+
+.content-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission-block .text-content,
+.vision-block .text-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.mission-block .image-content,
+.vision-block .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-block h2 {
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.content-block p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Adjust order for vision block */
+.vision-block {
+    flex-direction: row; /* Image on left, text on right */
+}
+
+/* Our Team Section */
+.our-team {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.our-team h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #f39c12;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.team-member-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-member-card .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #f39c12;
+}
+
+.team-member-card h3 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.team-member-card p {
+    font-size: 1em;
+    color: #555;
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50; /* Dark blue */
+    color: white;
+    padding: 20px 5%;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f39c12;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .content-block {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vision-block {
+        flex-direction: column; /* Reset order for smaller screens */
+    }
+
+    .content-block .text-content,
+    .content-block .image-content {
+        padding: 15px;
+    }
+
+    .content-block img {
+        margin-top: 20px;
+    }
+
+    .team-member-card {
+        width: 45%; /* Two cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .logo {
+        margin-bottom: 15px;
+    }
+
+    .navbar nav ul {
+        margin-top: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar nav ul li {
+        margin: 0 10px;
+    }
+
+    .about-us-hero h1 {
+        font-size: 2.5em;
+    }
+
+    .content-block h2 {
+        font-size: 1.8em;
+    }
+
+    .content-block p {
+        font-size: 1em;
+    }
+
+    .our-team h2 {
+        font-size: 2em;
+    }
+
+    .team-member-card {
+        width: 80%; /* Single card per row */
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-member-card {
+        width: 95%;
+    }
+}
